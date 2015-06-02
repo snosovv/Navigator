@@ -1,0 +1,2291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Geoportal xmlns:ows="http://www.opengis.net/ows/1.1">
+	<!--Определение основных параметров геопорталов-->
+	<Defines>
+		<!--Тип алгоритма поиска данных на сервере-->
+		<Algorithm>
+			<UTMSType Name="GOOGLE" Value="0"/>
+			<UTMSType Name="YAHOO" Value="1"/>
+			<UTMSType Name="OPENSTREETMAP" Value="2"/>
+			<UTMSType Name="VIRTEARTH" Value="3"/>
+			<UTMSType Name="YANDEX" Value="4"/>
+			<UTMSType Name="KOSMOSNIMKI" Value="5"/>
+			<UTMSType Name="PROTECTEDPLANET" Value="6"/>
+			<UTMSType Name="ROSREESTR" Value="7"/>
+			<UTMSType Name="ESRI" Value="8"/>
+			<UTMSType Name="OSM" Value="9"/>
+			<UTMSType Name="GOOGLEHYBRYD" Value="10"/>
+			<UTMSType Name="WIKIMAPIA" Value="11"/>
+			<UTMSType Name="MAPSFORFREE" Value="12"/>
+			<UTMSType Name="YANDEXTRAFF" Value="13"/>
+			<UTMSType Name="YANDEXNAROD" Value="14"/>
+			<UTMSType Name="NAVITEL" Value="15"/>
+			<UTMSType Name="MAIL" Value="16"/>
+			<UTMSType Name="MAILSAT" Value="17"/>
+			<UTMSType Name="NOKIANAVTEQ" Value="18"/>
+			<UTMSType Name="NOKIA" Value="19"/>
+			<UTMSType Name="ROSKOSMOS" Value="20"/>
+			<UTMSType Name="GENSHTAB" Value="21"/>
+			<UTMSType Name="UKORTHO" Value="22"/>
+			<UTMSType Name="VEGA" Value="23"/>
+			<UTMSType Name="VEGAFIRE" Value="24"/>
+			<UTMSType Name="YR" Value="25"/>
+			<UTMSType Name="NEWUK" Value="26"/>
+			<UTMSType Name="NEWUKRAZGR" Value="27"/>
+			<UTMSType Name="ROSREESTRCADASTR" Value="28"/>
+		</Algorithm>
+		<!--Стандарт доступа к данным-->
+		<PortalStadndart>
+			<Type>WMS</Type>
+			<Type>WMTS</Type>
+			<Type>WFS</Type>
+			<!--Стандарт доступа к любому геопорталу-->
+			<Type>UTMS</Type>
+			<!--Подтип доступа к геопорталу-->
+			<SubType>TMS</SubType>
+			<SubType>TMSGEO</SubType>
+			<SubType>NOCAP</SubType>
+		</PortalStadndart>
+		<!--Описание поддерживаемых матриц-->
+		<TileMatrixSet>
+			<TileMatrix>
+				<!--Название матрицы-->
+				<ows:Identifier>urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible</ows:Identifier>
+				<!--Габариты-->
+				<ows:BoundingBox>
+					<ows:LowerCorner>-20037508.34279000 -20037508.34279000</ows:LowerCorner>
+					<ows:UpperCorner>20037508.34279000 20037508.34279000</ows:UpperCorner>
+				</ows:BoundingBox>
+				<ows:WGS84BoundingBox>
+					<ows:LowerCorner>-180 -85</ows:LowerCorner>
+					<ows:UpperCorner>180 85</ows:UpperCorner>
+				</ows:WGS84BoundingBox>
+				<!--Поддерживаемая проекция-->
+				<CRS>EPSG:3857</CRS>
+				<!--Точка привязки левого верхнего угла-->
+				<TopLeftCorner>-20037508.34279000 20037508.34279000</TopLeftCorner>
+				<!--Ширина тайла-->
+				<TileWidth>256</TileWidth>
+				<!--Высота тайла-->
+				<TileHeight>256</TileHeight>
+				<!--Кол-во тайлов на каждом уровне-->
+				<MatrixBound>
+					<Zoom Value="0">
+						<!--Кол-во тайлов на каждом уровне-->
+						<Width>1</Width>
+						<Height>1</Height>
+						<!--Масштабный коэффициент-->
+						<Denominator>559082264.0287178</Denominator>
+					</Zoom>
+					<Zoom Value="1">
+						<Width>2</Width>
+						<Height>2</Height>
+						<Denominator>279541132.0143589</Denominator>
+					</Zoom>
+					<Zoom Value="2">
+						<Width>4</Width>
+						<Height>4</Height>
+						<Denominator>139770566.0071794</Denominator>
+					</Zoom>
+					<Zoom Value="3">
+						<Width>8</Width>
+						<Height>8</Height>
+						<Denominator>69885283.00358972</Denominator>
+					</Zoom>
+					<Zoom Value="4">
+						<Width>16</Width>
+						<Height>16</Height>
+						<Denominator>34942641.50179486</Denominator>
+					</Zoom>
+					<Zoom Value="5">
+						<Width>32</Width>
+						<Height>32</Height>
+						<Denominator>17471320.75089743</Denominator>
+					</Zoom>
+					<Zoom Value="6">
+						<Width>64</Width>
+						<Height>64</Height>
+						<Denominator>8735660.375448715</Denominator>
+					</Zoom>
+					<Zoom Value="7">
+						<Width>128</Width>
+						<Height>128</Height>
+						<Denominator>4367830.187724357</Denominator>
+					</Zoom>
+					<Zoom Value="8">
+						<Width>256</Width>
+						<Height>256</Height>
+						<Denominator>2183915.093862179</Denominator>
+					</Zoom>
+					<Zoom Value="9">
+						<Width>512</Width>
+						<Height>512</Height>
+						<Denominator>1091957.546931089</Denominator>
+					</Zoom>
+					<Zoom Value="10">
+						<Width>1024</Width>
+						<Height>1024</Height>
+						<Denominator>545978.7734655447</Denominator>
+					</Zoom>
+					<Zoom Value="11">
+						<Width>2048</Width>
+						<Height>2048</Height>
+						<Denominator>272989.3867327723</Denominator>
+					</Zoom>
+					<Zoom Value="12">
+						<Width>4096</Width>
+						<Height>4096</Height>
+						<Denominator>136494.6933663862</Denominator>
+					</Zoom>
+					<Zoom Value="13">
+						<Width>8192</Width>
+						<Height>8192</Height>
+						<Denominator>68247.34668319309</Denominator>
+					</Zoom>
+					<Zoom Value="14">
+						<Width>16384</Width>
+						<Height>16384</Height>
+						<Denominator>34123.67334159654</Denominator>
+					</Zoom>
+					<Zoom Value="15">
+						<Width>32768</Width>
+						<Height>32768</Height>
+						<Denominator>17061.83667079827</Denominator>
+					</Zoom>
+					<Zoom Value="16">
+						<Width>65536</Width>
+						<Height>65536</Height>
+						<Denominator>8530.918335399136</Denominator>
+					</Zoom>
+					<Zoom Value="17">
+						<Width>131072</Width>
+						<Height>131072</Height>
+						<Denominator>4265.459167699568</Denominator>
+					</Zoom>
+					<Zoom Value="18">
+						<Width>262144</Width>
+						<Height>262144</Height>
+						<Denominator>2132.729583849784</Denominator>
+					</Zoom>
+					<Zoom Value="19">
+						<Width>524288</Width>
+						<Height>524288</Height>
+						<Denominator>1066.364791924891</Denominator>
+					</Zoom>
+					<Zoom Value="20">
+						<Width>1048576</Width>
+						<Height>1048576</Height>
+						<Denominator>533.1823959624459</Denominator>
+					</Zoom>
+				</MatrixBound>
+			</TileMatrix>
+			<TileMatrix>
+				<!--Название матрицы-->
+				<ows:Identifier>EPSG:3395</ows:Identifier>
+				<!--Габариты-->
+				<ows:BoundingBox>
+					<ows:LowerCorner>-20037508.34279000 -20037508.34279000</ows:LowerCorner>
+					<ows:UpperCorner>20037508.34279000 20037508.34279000</ows:UpperCorner>
+				</ows:BoundingBox>
+				<ows:WGS84BoundingBox>
+					<ows:LowerCorner>-180 -85</ows:LowerCorner>
+					<ows:UpperCorner>180 85</ows:UpperCorner>
+				</ows:WGS84BoundingBox>
+				<!--Поддерживаемая проекция-->
+				<CRS>EPSG:3395</CRS>
+				<!--Точка привязки левого верхнего угла-->
+				<TopLeftCorner>-20037508.34279000 20037508.34279000</TopLeftCorner>
+				<!--Ширина тайла-->
+				<TileWidth>256</TileWidth>
+				<!--Высота тайла-->
+				<TileHeight>256</TileHeight>
+				<MatrixBound>
+					<Zoom Value="0">
+						<!--Кол-во тайлов на каждом уровне-->
+						<Width>1</Width>
+						<Height>1</Height>
+						<!--Масштабный коэффициент-->
+						<Denominator>559082264.0287178</Denominator>
+					</Zoom>
+					<Zoom Value="1">
+						<Width>2</Width>
+						<Height>2</Height>
+						<Denominator>279541132.0143589</Denominator>
+					</Zoom>
+					<Zoom Value="2">
+						<Width>4</Width>
+						<Height>4</Height>
+						<Denominator>139770566.0071794</Denominator>
+					</Zoom>
+					<Zoom Value="3">
+						<Width>8</Width>
+						<Height>8</Height>
+						<Denominator>69885283.00358972</Denominator>
+					</Zoom>
+					<Zoom Value="4">
+						<Width>16</Width>
+						<Height>16</Height>
+						<Denominator>34942641.50179486</Denominator>
+					</Zoom>
+					<Zoom Value="5">
+						<Width>32</Width>
+						<Height>32</Height>
+						<Denominator>17471320.75089743</Denominator>
+					</Zoom>
+					<Zoom Value="6">
+						<Width>64</Width>
+						<Height>64</Height>
+						<Denominator>8735660.375448715</Denominator>
+					</Zoom>
+					<Zoom Value="7">
+						<Width>128</Width>
+						<Height>128</Height>
+						<Denominator>4367830.187724357</Denominator>
+					</Zoom>
+					<Zoom Value="8">
+						<Width>256</Width>
+						<Height>256</Height>
+						<Denominator>2183915.093862179</Denominator>
+					</Zoom>
+					<Zoom Value="9">
+						<Width>512</Width>
+						<Height>512</Height>
+						<Denominator>1091957.546931089</Denominator>
+					</Zoom>
+					<Zoom Value="10">
+						<Width>1024</Width>
+						<Height>1024</Height>
+						<Denominator>545978.7734655447</Denominator>
+					</Zoom>
+					<Zoom Value="11">
+						<Width>2048</Width>
+						<Height>2048</Height>
+						<Denominator>272989.3867327723</Denominator>
+					</Zoom>
+					<Zoom Value="12">
+						<Width>4096</Width>
+						<Height>4096</Height>
+						<Denominator>136494.6933663862</Denominator>
+					</Zoom>
+					<Zoom Value="13">
+						<Width>8192</Width>
+						<Height>8192</Height>
+						<Denominator>68247.34668319309</Denominator>
+					</Zoom>
+					<Zoom Value="14">
+						<Width>16384</Width>
+						<Height>16384</Height>
+						<Denominator>34123.67334159654</Denominator>
+					</Zoom>
+					<Zoom Value="15">
+						<Width>32768</Width>
+						<Height>32768</Height>
+						<Denominator>17061.83667079827</Denominator>
+					</Zoom>
+					<Zoom Value="16">
+						<Width>65536</Width>
+						<Height>65536</Height>
+						<Denominator>8530.918335399136</Denominator>
+					</Zoom>
+					<Zoom Value="17">
+						<Width>131072</Width>
+						<Height>131072</Height>
+						<Denominator>4265.459167699568</Denominator>
+					</Zoom>
+					<Zoom Value="18">
+						<Width>262144</Width>
+						<Height>262144</Height>
+						<Denominator>2132.729583849784</Denominator>
+					</Zoom>
+					<Zoom Value="19">
+						<Width>524288</Width>
+						<Height>524288</Height>
+						<Denominator>1066.364791924891</Denominator>
+					</Zoom>
+					<Zoom Value="20">
+						<Width>1048576</Width>
+						<Height>1048576</Height>
+						<Denominator>533.1823959624459</Denominator>
+					</Zoom>
+				</MatrixBound>
+			</TileMatrix>
+		</TileMatrixSet>
+	</Defines>
+	<!--Сервисы для выпадающего списка в диалоге-->
+	<WMS_WMTS>
+    <Server Description="WMS сервис Росреетра"><![CDATA[http://maps.rosreestr.ru/arcgis/services/Cadastre/CadastreWMS/MapServer/WMSServer]]></Server>
+    <Server Description="WMS\WMTS Сервис Космоснимков" ApiKey="L5VW1QBBHJ"><![CDATA[http://maps.kosmosnimki.ru/TileService.ashx]]></Server>
+    <Server Description="WMS сервис ZuluServer"><![CDATA[http://zs.zulugis.ru:6473/ws]]></Server>
+    <Server Description="WMS сервис заповедников и охраняемых территорий"><![CDATA[http://gis-lab.info/cgi-bin/mapserv?map=/usr/local/www/gis-lab/data/data/oopt/wms.map]]></Server>
+    <Server Description="Обновляемая база данных дистанционного мониторинга возгораний"><![CDATA[http://firms.modaps.eosdis.nasa.gov/wms/]]></Server>
+    <Server Description="Банк пространственных данных КБ-Панорама"><![CDATA[http://spatialdb.net/wms/wms.aspx]]></Server>
+    <Server Description="Сервер пространственных данных КБ-Панорама"><![CDATA[http://gisserver.info/GISWebServiceSE/wms.php]]></Server>
+    <Server><![CDATA[CDATA]]></Server>
+    <Server><![CDATA[http://gisserver.ru/Panorama/wms/wms.aspx]]></Server>
+  </WMS_WMTS>
+	<WFS>
+		<Server Description="WFS сервис транзакций Панорамы"><![CDATA[http://gisserver.ru/wfst/default.aspx]]></Server>
+		<Server><![CDATA[http://giskarta.miigaik.ru/GISWebServiceSE/service.php]]></Server>
+	</WFS>
+	<WCS>
+		<Server Description="WCS сервис Панорамы"><![CDATA[http://spatialdb.net/wcs/wcs.aspx]]></Server>
+		<Server><![CDATA[http://gisserver.info/GISWebServiceSE/service.php]]></Server>
+	</WCS>
+	<!--Параметры диалога-->
+	<Dialog>
+		<!--Высота диалога WMS-->
+		<Height>684</Height>
+		<!--Высота диалога WFS-->
+		<WfsHeight>630</WfsHeight>
+	</Dialog>
+	<!--Параметры геопорталов-->
+	<Portal>
+		<Params>
+			<!--Файл обновления-->
+			<UpdateFile>
+				<![CDATA[http://www.gisinfo.net/geoportal/wmslist.xml]]>
+			</UpdateFile>
+			<!--Использовать ли прокси? 0 - нет 1 - да-->
+			<UseProxy>0</UseProxy>
+			<!--Адрес прокси сервера-->
+			<Proxyserver Url=""/>
+			<!--Порт-->
+			<Port>0</Port>
+			<!--Имя пользователя-->
+			<User>0</User>
+			<!--Пароль-->
+			<Password>0</Password>
+			<!--Максимальное время ожидания соединения с сервером в милисекундах-->
+			<ConnectTimeout>30000</ConnectTimeout>
+			<!--Максимальное время ожидания загрузки 1 тайла в милисекундах-->
+			<ReadTimeout>60000</ReadTimeout>
+			<UpdateFlag>0</UpdateFlag>
+			<FeatureCount>0</FeatureCount>
+		</Params>
+		<Topic Name="Google" Link="Wmslist\Google.bmp">
+			<Layer Name="Спутник" UnicId="GoogleSat">
+				<ConnectedSting>
+					<URL><![CDATA[http://khm.google.com/kh/v=145&hl=ru]]></URL>
+					<ID Number="1" Value="GoogleSat"/>
+					<Name Number="1" Value="GoogleSat"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>0</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<Password>0</Password>
+				<EditVersion>2</EditVersion>
+			</Layer>
+			<Layer Name="Карта" UnicId="GoogleMap">
+				<ConnectedSting>
+					<URL><![CDATA[http://mts0.google.com/vt/lyrs=m@184000000&hl=ru]]></URL>
+					<ID Number="1" Value="GoogleMap"/>
+					<Name Number="1" Value="GoogleMap"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>0</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+			<Layer Name="Погода" UnicId="GoogleWeather">
+				<ConnectedSting>
+					<URL><![CDATA[http://mts1.google.com/mapslt?lyrs=weather_c_ms|invert:0]]></URL>
+					<ID Number="1" Value="GoogleWeather"/>
+					<Name Number="1" Value="GoogleWeather"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>0</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+			<Layer Name="Ландшафт" UnicId="GoogleLand">
+				<ConnectedSting>
+					<URL><![CDATA[http://mt.google.com/vt?v=w2p.999&hl=ru]]></URL>
+					<ID Number="1" Value="GoogleLand"/>
+					<Name Number="1" Value="GoogleLand"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>0</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+			<Layer Name="Гибрид" UnicId="GoogleHybr">
+				<ConnectedSting>
+					<URL><![CDATA[http://mt.google.com/vt/lyrs=h@169000000&hl=ru]]></URL>
+					<ID Number="1" Value="GoogleHybr"/>
+					<Name Number="1" Value="GoogleHybr"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>10</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+			<Layer Name="Пробки" UnicId="GoogleTraff">
+				<ConnectedSting>
+					<URL><![CDATA[http://mt.google.com/vt?hl=ru&src=app&lyrs=h@177000000,traffic|seconds_into_week:-1]]></URL>
+					<ID Number="1" Value="GoogleTraff"/>
+					<Name Number="1" Value="GoogleTraff"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>10</Alghoritm>
+				<Transparent>0x00000000</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+			<Layer Name="Подписи" UnicId="GoogleText">
+				<ConnectedSting>
+					<URL><![CDATA[http://mt1.google.com/vt/lyrs=h@177000000&hl=ru&src=app]]></URL>
+					<ID Number="1" Value="GoogleText"/>
+					<Name Number="1" Value="GoogleText"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>0</Alghoritm>
+				<Transparent>0x00000000</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+		</Topic>
+		<Topic Name="Yahoo" Link="Wmslist\Yahoo.bmp">
+			<Layer Name="Спутник" UnicId="YahooSat">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.yimg.com/ae/ximg?v=1.9&t=a&s=256&r=1]]></URL>
+					<ID Number="1" Value="YahooSat"/>
+					<Name Number="1" Value="YahooSat"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>1</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+			<Layer Name="Карта" UnicId="YahooMap">
+				<ConnectedSting>
+					<URL><![CDATA[http://us.maps1.yimg.com/us.tile.maps.yimg.com/tl?v=4.3&md=2&r=1]]></URL>
+					<ID Number="1" Value="YahooMap"/>
+					<Name Number="1" Value="YahooMap"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>1</Alghoritm>
+				<Transparent>0xF0F0F0</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+		</Topic>
+		<Topic Name="OpenStreetMap" Link="Wmslist\OpenStreetMap.bmp">
+			<Layer Name="Карта" UnicId="OpenStreetMap">
+				<ConnectedSting>
+					<URL><![CDATA[http://a.tile.openstreetmap.org/]]></URL>
+					<ID Number="1" Value="OpenStreetMap"/>
+					<Name Number="1" Value="OpenStreetMap"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>2</Alghoritm>
+				<Transparent>0xE8EEF1</Transparent>
+			</Layer>
+		</Topic>
+		<Topic Name="Сервис ВЕГА" Link="Wmslist\Vega.bmp">
+			<Topic Name="Метеоданные" Link="Wmslist\Vega.bmp">
+				<Layer Name="Температура (C)" UnicId="Temp">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=T&meteo_view=t&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Минимальная температура (C)" UnicId="TempMin">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=Tmin&meteo_view=t&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Максимальная температура (C)" UnicId="TempMax">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=Tmax&meteo_view=t&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Относительная влажность (%)" UnicId="RH">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=RH&meteo_view=rh&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Атмосферное давление (Мбар)" UnicId="PRES">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=PRES&meteo_view=pres&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Облачность (%)" UnicId="TCDC">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=TCDC&meteo_view=cld&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Количество осадков (кг/м2)" UnicId="APCP">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=APCP&meteo_view=r&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Нисходящая длинноволновая радиация (вт/м2)" UnicId="DLWRF">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=DLWRF&meteo_view=rad&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Восходящая длинноволновая радиация (вт/м2)" UnicId="ULWRF">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=ULWRF&meteo_view=rad&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Нисходящая коротковолновая радиация (вт/м2)" UnicId="DSWRF">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=DSWRF&meteo_view=rad&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Восходящая коротковолновая радиация (вт/м2)" UnicId="USWRF">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=USWRF&meteo_view=rad&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Влажность почвы на глубине 10см" UnicId="SOILW10">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=SOILW10&meteo_view=soil&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Влажность почвы на глубине 40см" UnicId="SOILW40">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=SOILW40&meteo_view=soil&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Влажность почвы на глубине 100см" UnicId="SOILW100">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.plmeteo_prm=SOILW100&meteo_view=soil&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Влажность почвы на глубине 200см" UnicId="SOILW200">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=SOILW200&meteo_view=soil&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Температура почвы на глубине 10см" UnicId="TMPGR10">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?meteo_prm=TMPGR10&meteo_view=tk&meteo_mode=hourly&meteo_drv=grid&meteo_src=ncar093094&customshape_location=MASKS&customshape_layers=russia&transparent_rgb=254-254-254]]></URL>
+						<ID Number="1" Value="meteo_isoline"/>
+						<Name Number="1" Value="meteo_isoline"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>23</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+			</Topic>
+			<Topic Name="Природные пожары" Link="Wmslist\Vega.bmp">
+				<Layer Name="Лесные пожары" UnicId="ForestFires">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/fap/toproxy/blades/local/smiswms/get_map.pl?dayly_fires_f_show_id=1&EXCEPTIONS=inimage&transparent=1&dayly_fires_f_draw_only_active=0&dayly_fires_f_draw_label=0]]></URL>
+						<ID Number="1" Value="dayly_fires_f"/>
+						<Name Number="1" Value="dayly_fires_f"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>24</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Нелесные пожары" UnicId="NonForestFires">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/fap/toproxy/blades/local/smiswms/get_map.pl?dayly_fires_f_show_id=1&EXCEPTIONS=inimage&transparent=1&dayly_fires_f_draw_only_active=0&dayly_fires_f_draw_label=0]]></URL>
+						<ID Number="1" Value="dayly_fires_nf"/>
+						<Name Number="1" Value="dayly_fires_nf"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>24</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Горячие точки лесные" UnicId="HotForestFires">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?dayly_fires_f_show_id=1&EXCEPTIONS=inimage&transparent=1]]></URL>
+						<ID Number="1" Value="dayly_hotspots_f"/>
+						<Name Number="1" Value="dayly_hotspots_f"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>24</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Горячие точки нелесные" UnicId="HotNonForestFires">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?dayly_fires_f_show_id=1&EXCEPTIONS=inimage&transparent=1]]></URL>
+						<ID Number="1" Value="dayly_hotspots_nf"/>
+						<Name Number="1" Value="dayly_hotspots_nf"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>24</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+			</Topic>
+			<Topic Name="Леса" Link="Wmslist\Vega.bmp">
+				<Layer Name="Карта растительности" UnicId="ForestMap">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?EXCEPTIONS=inimage&transparent=1&customshape_location=vega/forest_view&customshape_layers=terranorte_1_1]]></URL>
+						<ID Number="1" Value="customshape"/>
+						<Name Number="1" Value="customshape"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>24</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+				<Layer Name="Запасы насаждений" UnicId="ForestLand">
+					<ConnectedSting>
+						<URL><![CDATA[http://pro-vega.ru/smiswms/get_map.pl?EXCEPTIONS=inimage&transparent=1&customshape_location=vega/forest_view&customshape_layers=stock_gul]]></URL>
+						<ID Number="1" Value="customshape"/>
+						<Name Number="1" Value="customshape"/>
+						<Projection CRS="EPSG:3857"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>NOCAP</SubType>
+					<Alghoritm>24</Alghoritm>
+					<UserName>demo</UserName>
+					<UserNameCon>first</UserNameCon>
+					<Password>demo</Password>
+					<PasswordCon>second</PasswordCon>
+					<UrlLogin><![CDATA[http://vega.smislab.ru/login/login.pl]]></UrlLogin>
+					<AdditiaonalParLog>mode=in&amp;from=/</AdditiaonalParLog>
+					<UseAut>1</UseAut>
+					<EditVersion>1</EditVersion>
+				</Layer>
+			</Topic>
+		</Topic>
+		<Topic Name="Сервис YR" Link="Wmslist\YR.bmp">
+			<Layer Name="Метеоданные" UnicId="YrMeteo">
+				<ConnectedSting>
+					<URL><![CDATA[http://public-wms.met.no/verportal/verportal.map?EXCEPTIONS=application%2Fvnd.ogc.se_xml]]></URL>
+					<ID Number="1" Value="precipitation_3h_global"/>
+					<Name Number="1" Value="precipitation_3h_global"/>
+					<Projection CRS="EPSG:900913"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0x00000000</Transparent>
+				<SubType>NOCAP</SubType>
+				<Alghoritm>25</Alghoritm>
+				<EditVersion>1</EditVersion>
+			</Layer>
+		</Topic>
+		<Topic Name="Bing maps" Link="Wmslist\Virtual Earth.bmp">
+			<Layer Name="Спутник" UnicId="VirtualEarthSat">
+				<ConnectedSting>
+					<URL><![CDATA[http://ecn.t0.tiles.virtualearth.net/tiles/a]]></URL>
+					<ID Number="1" Value="VirtualEarthSat"/>
+					<Name Number="1" Value="VirtualEarthSat"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>3</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+			<Layer Name="Карта" UnicId="VirtualEarthMap">
+				<ConnectedSting>
+					<URL><![CDATA[http://r0.ortho.tiles.virtualearth.net/tiles/r]]></URL>
+					<ID Number="1" Value="VirtualEarthMap"/>
+					<Name Number="1" Value="VirtualEarthMap"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>3</Alghoritm>
+				<Transparent>0xF2F4F7</Transparent>
+			</Layer>
+		</Topic>
+		<Topic Name="Yandex" Link="Wmslist\Yandex.bmp">
+			<Layer Name="Спутник" UnicId="YandexSat">
+				<ConnectedSting>
+					<URL><![CDATA[http://sat01.maps.yandex.net/tiles?l=sat&v=1.40.0]]></URL>
+					<ID Number="1" Value="YandexSat"/>
+					<Name Number="1" Value="YandexSat"/>
+					<Matrix Name="EPSG:3395"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>4</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+			<Layer Name="Карта" UnicId="YandexMap">
+				<ConnectedSting>
+					<URL><![CDATA[http://vec01.maps.yandex.net/tiles?l=map&v=2.30.0]]></URL>
+					<ID Number="1" Value="YandexMap"/>
+					<Name Number="1" Value="YandexMap"/>
+					<Matrix Name="EPSG:3395"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>4</Alghoritm>
+				<Transparent>0xF0FFFF</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+			<Layer Name="Гибрид" UnicId="YandexText">
+				<ConnectedSting>
+					<URL><![CDATA[http://vec01.maps.yandex.net/tiles?l=skl&v=2.28.0]]></URL>
+					<ID Number="1" Value="YandexText"/>
+					<Name Number="1" Value="YandexText"/>
+					<Matrix Name="EPSG:3395"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>4</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<EditVersion>2</EditVersion>
+			</Layer>
+			<Layer Name="Пробки" UnicId="YandexTraff">
+				<ConnectedSting>
+					<URL><![CDATA[http://jgo.maps.yandex.net/tiles?l=trf%2Ctrfe]]></URL>
+					<ID Number="1" Value="YandexTraff"/>
+					<Name Number="1" Value="YandexTraff"/>
+					<Matrix Name="EPSG:3395"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>13</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+			<Layer Name="Народная карта" UnicId="YandexNarod">
+				<ConnectedSting>
+					<URL><![CDATA[http://01.pvec.maps.yandex.net/?l=pmap&lang=ru-RU]]></URL>
+					<ID Number="1" Value="YandexNarod"/>
+					<Name Number="1" Value="YandexNarod"/>
+					<Matrix Name="EPSG:3395"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>14</Alghoritm>
+				<Transparent>0xEEFFFF</Transparent>
+			</Layer>
+		</Topic>
+		<Topic Name="Росреестр" Link="Wmslist\Росреестр.bmp">
+			<Layer Name="Кадастровая карта" UnicId="Kad_karta">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.rosreestr.ru/arcgis/rest/services/Cadastre/Cadastre/MapServer/export?dpi=96&transparent=true&format=png32&bboxSR=102100&imageSR=102100&f=image]]></URL>
+					<ID Number="1" Value="Kad_karta"/>
+					<Name Number="1" Value="Кадастровая карта"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1000000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Кадастровые округа" UnicId="Kad_Okruga">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.rosreestr.ru/arcgis/services/Cadastre/CadastreWMS/MapServer/WMSServer]]></URL>
+					<ID Number="1" Value="14"/>
+					<Name Number="1" Value="Кадастровые округа"/>
+					<ID Number="2" Value="15"/>
+					<Name Number="2" Value="Кадастровые округа"/>
+					<ID Number="3" Value="16"/>
+					<Name Number="3" Value="Кадастровые округа"/>
+					<ID Number="4" Value="17"/>
+					<Name Number="4" Value="Кадастровые округа"/>
+					<ID Number="5" Value="18"/>
+					<Name Number="5" Value="Кадастровые округа"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>1000000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Кадастровые районы" UnicId="Kad_Raioni">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.rosreestr.ru/arcgis/services/Cadastre/CadastreWMS/MapServer/WMSServer]]></URL>
+					<ID Number="1" Value="9"/>
+					<Name Number="1" Value="Кадастровые районы"/>
+					<ID Number="2" Value="10"/>
+					<Name Number="2" Value="Кадастровые районы"/>
+					<ID Number="3" Value="11"/>
+					<Name Number="3" Value="Кадастровые районы"/>
+					<ID Number="4" Value="12"/>
+					<Name Number="4" Value="Кадастровые районы"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>250000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Кадастровые кварталы" UnicId="Kad_Kvart">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.rosreestr.ru/arcgis/services/Cadastre/CadastreWMS/MapServer/WMSServer]]></URL>
+					<ID Number="1" Value="5"/>
+					<Name Number="1" Value="Кадастровые кварталы"/>
+					<ID Number="2" Value="6"/>
+					<Name Number="2" Value="Кадастровые кварталы"/>
+					<ID Number="3" Value="7"/>
+					<Name Number="3" Value="Кадастровые кварталы"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>200000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Земельные участки" UnicId="Zem_uch">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.rosreestr.ru/arcgis/services/Cadastre/CadastreWMS/MapServer/WMSServer]]></URL>
+					<ID Number="1" Value="1"/>
+					<Name Number="1" Value="Земельные участки (крупные)"/>
+					<ID Number="2" Value="2"/>
+					<Name Number="2" Value="Земельные участки"/>
+					<ID Number="3" Value="3"/>
+					<Name Number="3" Value="Объекты капитального строительства"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>50000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Карта" UnicId="RosreestrMap">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.rosreestr.ru/ArcGIS/rest/services/BaseMaps/BaseMap/MapServer/tile/]]></URL>
+					<ID Number="1" Value="RosreestrMap"/>
+					<Name Number="1" Value="RosreestrMap"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>7</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>1000000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Подписи" UnicId="RosreestrLeg">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.rosreestr.ru/ArcGIS/rest/services/BaseMaps/Anno/MapServer/tile/]]></URL>
+					<ID Number="1" Value="RosreestrLeg"/>
+					<Name Number="1" Value="RosreestrLeg"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>7</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>1000000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+		</Topic>
+		<Topic Name="Кадастровая карта Украины" Link="Wmslist\temp.bmp">
+			<Topic Name="Базовые слои" Link="Wmslist\temp.bmp">
+				<Layer Name="Карта масштаба 1 : 100 000" UnicId="UK_BaseMap">
+					<ConnectedSting>
+						<URL><![CDATA[http://212.26.144.110/tile2/map_100000/]]></URL>
+						<ID Number="1" Value="UK_BaseMap"/>
+						<Name Number="1" Value="UK_BaseMap"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>22</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>18452210</ShowScale>
+					<MinZoom>5</MinZoom>
+					<MaxZoom>16</MaxZoom>
+					<Point X="49" Y="31"/>
+				</Layer>
+				<Layer Name="Ортофотопланы" UnicId="UK_Orto">
+					<ConnectedSting>
+						<URL><![CDATA[http://212.26.144.110/tile2/orto_10000/]]></URL>
+						<ID Number="1" Value="UK_Orto"/>
+						<Name Number="1" Value="UK_Orto"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>22</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>18452210</ShowScale>
+					<MinZoom>5</MinZoom>
+					<MaxZoom>16</MaxZoom>
+					<Point X="49" Y="31"/>
+				</Layer>
+			</Topic>
+			<Topic Name="Cлои" Link="Wmslist\temp.bmp">
+				<Layer Name="Почвенная карта" UnicId="UK_Grunt">
+					<ConnectedSting>
+						<URL><![CDATA[http://212.26.144.110/geowebcache/service/wms?tiled=true]]></URL>
+						<ID Number="1" Value="grunt"/>
+						<Name Number="1" Value="grunt"/>
+						<Projection CRS="EPSG:900913"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>TMSGEO</SubType>
+					<ShowScale>100000</ShowScale>
+					<Point X="49" Y="31"/>
+				</Layer>
+				<Layer Name="Кадастровое деление" UnicId="UK_Kadastr">
+					<ConnectedSting>
+						<URL><![CDATA[http://212.26.144.110/geowebcache/service/wms?tiled=true]]></URL>
+						<ID Number="1" Value="kadastr"/>
+						<Name Number="1" Value="kadastr"/>
+						<Projection CRS="EPSG:900913"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>TMSGEO</SubType>
+					<ShowScale>100000</ShowScale>
+					<Point X="49" Y="31"/>
+				</Layer>
+				<Layer Name="АТУ" UnicId="UK_ATY">
+					<ConnectedSting>
+						<URL><![CDATA[http://212.26.144.110/geowebcache/service/wms?tiled=true]]></URL>
+						<ID Number="1" Value="atu"/>
+						<Name Number="1" Value="atu"/>
+						<Projection CRS="EPSG:900913"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<SubType>TMSGEO</SubType>
+					<ShowScale>100000</ShowScale>
+					<Point X="49" Y="31"/>
+				</Layer>
+			</Topic>
+		</Topic>
+		<Topic Name="Государственная геодезическая сеть Украины" Link="Wmslist\uaDGM.bmp">
+			<Layer Name="Топографическая карта" UnicId="NEWUK_TOPO">
+				<ConnectedSting>
+					<URL><![CDATA[http://dgm.gki.com.ua/maps/atu.geoportal.org.ua/shems/]]></URL>
+					<ID Number="1" Value="NEWUK_TOPO"/>
+					<Name Number="1" Value="NEWUK_TOPO"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>26</Alghoritm>
+				<Transparent>0xEBF5F8</Transparent>
+				<ShowScale>18452210</ShowScale>
+				<MinZoom>6</MinZoom>
+				<MaxZoom>12</MaxZoom>
+				<Point X="49" Y="31"/>
+			</Layer>
+			<Layer Name="Административно-территориальные границы" UnicId="NEWUK_Admin">
+				<ConnectedSting>
+					<URL><![CDATA[http://dgm.gki.com.ua/maps/atu.geoportal.org.ua/megi/]]></URL>
+					<ID Number="1" Value="NEWUK_Admin"/>
+					<Name Number="1" Value="NEWUK_Admin"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>26</Alghoritm>
+				<Transparent>0xFFFFFF</Transparent>
+				<ShowScale>18452210</ShowScale>
+				<MinZoom>6</MinZoom>
+				<MaxZoom>12</MaxZoom>
+				<Point X="49" Y="31"/>
+			</Layer>
+			<Layer Name="Геодезические пункты" UnicId="NEWUK_Geodesy">
+				<ConnectedSting>
+					<URL><![CDATA[http://dgm.gki.com.ua/maps/DGM/point/]]></URL>
+					<ID Number="1" Value="NEWUK_Geodesy"/>
+					<Name Number="1" Value="NEWUK_Geodesy"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>26</Alghoritm>
+				<Transparent>0xFFFFFF</Transparent>
+				<ShowScale>18452210</ShowScale>
+				<MinZoom>6</MinZoom>
+				<MaxZoom>12</MaxZoom>
+				<Point X="49" Y="31"/>
+			</Layer>
+			<Layer Name="Нивелирные пункты" UnicId="NEWUK_Nivelir">
+				<ConnectedSting>
+					<URL><![CDATA[http://dgm.gki.com.ua/maps/DGM/point_niv/]]></URL>
+					<ID Number="1" Value="NEWUK_Nivelir"/>
+					<Name Number="1" Value="NEWUK_Nivelir"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>26</Alghoritm>
+				<Transparent>0xFFFFFF</Transparent>
+				<ShowScale>18452210</ShowScale>
+				<MinZoom>8</MinZoom>
+				<MaxZoom>12</MaxZoom>
+				<Point X="49" Y="31"/>
+			</Layer>
+			<Layer Name="Линейно-угловые построения" UnicId="NEWUK_Nivelir">
+				<ConnectedSting>
+					<URL><![CDATA[http://dgm.gki.com.ua/maps/DGM/triangulation/]]></URL>
+					<ID Number="1" Value="NEWUK_Nivelir"/>
+					<Name Number="1" Value="NEWUK_Nivelir"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>26</Alghoritm>
+				<Transparent>0xFFFFFF</Transparent>
+				<ShowScale>18452210</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>12</MaxZoom>
+				<Point X="49" Y="31"/>
+			</Layer>
+			<Layer Name="Линии нивелирования" UnicId="NEWUK_NivelirLine">
+				<ConnectedSting>
+					<URL><![CDATA[http://dgm.gki.com.ua/maps/DGM/vimir_niv/]]></URL>
+					<ID Number="1" Value="NEWUK_NivelirLine"/>
+					<Name Number="1" Value="NEWUK_NivelirLine"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>26</Alghoritm>
+				<Transparent>0xFFFFFF</Transparent>
+				<ShowScale>18452210</ShowScale>
+				<MinZoom>6</MinZoom>
+				<MaxZoom>12</MaxZoom>
+				<Point X="49" Y="31"/>
+			</Layer>
+			<Layer Name="Разграфка и номенклатура топографических карт" UnicId="NEWUK_Razgraf">
+				<ConnectedSting>
+					<URL><![CDATA[http://atu.geoportal.org.ua/maps/atu.geoportal.org.ua/sk42/]]></URL>
+					<ID Number="1" Value="NEWUK_Razgraf"/>
+					<Name Number="1" Value="NEWUK_Razgraf"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>27</Alghoritm>
+				<Transparent>0xFFFFFF</Transparent>
+				<ShowScale>18452210</ShowScale>
+				<MinZoom>6</MinZoom>
+				<MaxZoom>12</MaxZoom>
+				<Point X="49" Y="31"/>
+			</Layer>
+		</Topic>
+		<Topic Name="КБ Панорама" Link="Wmslist\КБ Панорама.bmp">
+			<Topic Name="Области" Link="Wmslist\КБ Панорама.bmp">
+				<Topic Name="Московская область" Link="Wmslist\КБ Панорама.bmp">
+					<Layer Name="Москва и Московская область" UnicId="MosObl">
+						<ConnectedSting>
+							<URL><![CDATA[http://gisserver.ru/Panorama/wms/wms.aspx]]></URL>
+							<ID Number="1" Value="MosObl"/>
+							<Name Number="1" Value="Москва и Московская область"/>
+							<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+						</ConnectedSting>
+						<PortalStadndart>WMTS</PortalStadndart>
+						<Transparent>0xffffffff</Transparent>
+						<ShowScale>1135090</ShowScale>
+						<Point X="55.54448244" Y="38.21196422"/>
+					</Layer>
+				</Topic>
+				<Topic Name="Воронежская область" Link="Wmslist\КБ Панорама.bmp">
+					<Layer Name="Воронежская область - природный ландшафт" UnicId="Voronezh_landscape">
+						<ConnectedSting>
+							<URL><![CDATA[http://gisserver.ru/Panorama/wms/wms.aspx]]></URL>
+							<ID Number="1" Value="Voronezh_landscape"/>
+							<Name Number="1" Value="Воронежская область - природный ландшафт"/>
+							<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+						</ConnectedSting>
+						<PortalStadndart>WMTS</PortalStadndart>
+						<Transparent>0xffffffff</Transparent>
+						<ShowScale>1135090</ShowScale>
+						<Point X="51.181694" Y="40.095461"/>
+					</Layer>
+					<Layer Name="Воронежская область - города и дорожная сеть" UnicId="Voronezh_road_town">
+						<ConnectedSting>
+							<URL><![CDATA[http://gisserver.ru/Panorama/wms/wms.aspx]]></URL>
+							<ID Number="1" Value="Voronezh_road_town"/>
+							<Name Number="1" Value="Воронежская область - города и дорожная сеть"/>
+							<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+						</ConnectedSting>
+						<PortalStadndart>WMTS</PortalStadndart>
+						<Transparent>0xffffffff</Transparent>
+						<ShowScale>1135090</ShowScale>
+						<Point X="51.181694" Y="40.095461"/>
+					</Layer>
+					<Layer Name="Воронежская область - административное деление" UnicId="Voronezh_adm_del">
+						<ConnectedSting>
+							<URL><![CDATA[http://gisserver.ru/Panorama/wms/wms.aspx]]></URL>
+							<ID Number="1" Value="Voronezh_adm_del"/>
+							<Name Number="1" Value="Воронежская область - административное деление"/>
+							<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+						</ConnectedSting>
+						<PortalStadndart>WMTS</PortalStadndart>
+						<Transparent>0xffffffff</Transparent>
+						<ShowScale>1135090</ShowScale>
+						<Point X="51.181694" Y="40.095461"/>
+					</Layer>
+				</Topic>
+				<Topic Name="Тверская область" Link="Wmslist\КБ Панорама.bmp">
+					<Layer Name="Тверская область" UnicId="Tver_obl">
+						<ConnectedSting>
+							<URL><![CDATA[http://gisserver.ru/Panorama/wms/wms.aspx]]></URL>
+							<ID Number="1" Value="Tver_obl"/>
+							<Name Number="1" Value="Тверская область"/>
+							<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+						</ConnectedSting>
+						<PortalStadndart>WMTS</PortalStadndart>
+						<Transparent>0xffffffff</Transparent>
+						<ShowScale>9080719</ShowScale>
+						<Point X="57.37135" Y="39.24011925"/>
+					</Layer>
+				</Topic>
+			</Topic>
+			<Topic Name="Города" Link="Wmslist\КБ Панорама.bmp">
+				<Layer Name="Москва" UnicId="Moscow">
+					<ConnectedSting>
+						<URL><![CDATA[http://gisserver.ru/Panorama/wms/wms.aspx]]></URL>
+						<ID Number="1" Value="Moscow"/>
+						<Name Number="1" Value="Москва"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>WMTS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>567545</ShowScale>
+					<Point X="55.74952" Y="37.616729"/>
+				</Layer>
+				<Layer Name="Воронеж" UnicId="Voronezh">
+					<ConnectedSting>
+						<URL><![CDATA[http://gisserver.ru/Panorama/wms/wms.aspx]]></URL>
+						<ID Number="1" Value="Voronezh"/>
+						<Name Number="1" Value="Воронеж"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>WMTS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>567545</ShowScale>
+					<Point X="51.6" Y="39.2"/>
+				</Layer>
+				<Layer Name="Новосибирск" UnicId="Novosibirsk">
+					<ConnectedSting>
+						<URL><![CDATA[http://gisserver.ru/Panorama/wms/wms.aspx]]></URL>
+						<ID Number="1" Value="Novosibirsk"/>
+						<Name Number="1" Value="Новосибирск"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>WMTS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>1135090</ShowScale>
+					<Point X="55" Y="85.793164"/>
+				</Layer>
+			</Topic>
+			<Topic Name="Банк пространственных данных" Link="Wmslist\КБ Панорама.bmp">
+				<Layer Name="Схема покрытия данных цифровых карт" UnicId="0001">
+					<ConnectedSting>
+						<URL><![CDATA[http://62.173.139.231/wms/wms.aspx]]></URL>
+						<ID Number="1" Value="0001"/>
+						<Name Number="1" Value="Схема покрытия данных цифровых карт"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>WMTS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>4540359</ShowScale>
+					<Point X="55.94448244" Y="38.21196422"/>
+				</Layer>
+				<Layer Name="Схема покрытия данных ДЗЗ" UnicId="0002">
+					<ConnectedSting>
+						<URL><![CDATA[http://62.173.139.231/wms/wms.aspx]]></URL>
+						<ID Number="1" Value="0002"/>
+						<Name Number="1" Value="Схема покрытия данных ДЗЗ"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>WMTS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>4540359</ShowScale>
+					<Point X="55.94448244" Y="38.21196422"/>
+				</Layer>
+				<Layer Name="Схема покрытия данных матриц высот" UnicId="0003">
+					<ConnectedSting>
+						<URL><![CDATA[http://62.173.139.231/wms/wms.aspx]]></URL>
+						<ID Number="1" Value="0003"/>
+						<Name Number="1" Value="Схема покрытия данных матриц высот"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>WMTS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>4540359</ShowScale>
+					<Point X="55.94448244" Y="38.21196422"/>
+				</Layer>
+			</Topic>
+			<Layer Name="Карта Мира" UnicId="KB_WORLD">
+				<ConnectedSting>
+					<URL><![CDATA[http://gisserver.info/GISWebServiceSE/wms.php]]></URL>
+					<ID Number="1" Value="World"/>
+					<Name Number="1" Value="Карта мира"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>WMTS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>4540359</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+				<MinZoom>2</MinZoom>
+				<MaxZoom>10</MaxZoom>
+			</Layer>
+			<Layer Name="Карта России с OSM" UnicId="KB_OSM">
+				<ConnectedSting>
+					<URL><![CDATA[http://gisserver.info/GISWebServiceSE/wms.php]]></URL>
+					<ID Number="1" Value="Osm"/>
+					<Name Number="1" Value="Карта России(OSM)"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>WMTS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>4540359</ShowScale>
+				<MinZoom>2</MinZoom>
+				<MaxZoom>15</MaxZoom>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+		</Topic>
+		<Topic Name="Космоснимки" Link="Wmslist\Kosmosnimki.bmp">
+			<Layer Name="Базовое покрытие(WMS)" UnicId="Baze_Exp_wms">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.kosmosnimki.ru/TileService.ashx]]></URL>
+					<ID Number="1" Value="04C9E7CE82C34172910ACDBF8F1DF49A"/>
+					<Name Number="1" Value="БазовоеПокрытиеЭкспресс"/>
+					<Projection CRS="EPSG:3395"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ApiKey>L5VW1QBBHJ</ApiKey>
+			</Layer>
+			<Layer Name="Базовое покрытие(WMTS)" UnicId="Baze_Exp_wmts">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.kosmosnimki.ru/TileService.ashx]]></URL>
+					<ID Number="1" Value="04C9E7CE82C34172910ACDBF8F1DF49A"/>
+					<Name Number="1" Value="БазовоеПокрытиеЭкспресс"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<SubType>TMS</SubType>
+				<ApiKey>L5VW1QBBHJ</ApiKey>
+			</Layer>
+			<Layer Name="Орловская область 2011" UnicId="Kosmo_orl_2011_wmts">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.kosmosnimki.ru/TileService.ashx]]></URL>
+					<ID Number="1" Value="A18813A3A9E948A6A482F54F500BDDF7"/>
+					<Name Number="1" Value="SPOT 5 30-08-2011"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<SubType>TMS</SubType>
+				<ApiKey>XU5GJLDSFR</ApiKey>
+			</Layer>
+			<Layer Name="Орловская область 2008" UnicId="Kosmo_orl_2008_wmts">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.kosmosnimki.ru/TileService.ashx]]></URL>
+					<ID Number="1" Value="52A00F89D0AE42AAA2553B9DE9C3DAF4"/>
+					<Name Number="1" Value="SPOT 5 09-04-2008"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<SubType>TMS</SubType>
+				<ApiKey>XU5GJLDSFR</ApiKey>
+			</Layer>
+		</Topic>
+		<Topic Name="WIKIMAPIA" Link="Wmslist\WIKIMAPIA.bmp">
+			<Layer Name="Карта" UnicId="WIKIMAPIA">
+				<ConnectedSting>
+					<URL><![CDATA[http://wikimapia.org/?r=0&type=hybrid&lng=1]]></URL>
+					<ID Number="1" Value="WIKIMAPIA"/>
+					<Name Number="1" Value="WIKIMAPIA"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>11</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>100000</ShowScale>
+				<Point X="55.84448244" Y="37.81196422"/>
+			</Layer>
+			<Layer Name="Рельеф" UnicId="WIKIMAPIA_REL">
+				<ConnectedSting>
+					<URL><![CDATA[http://wikimapia.org/?r=0&lng=1]]></URL>
+					<ID Number="1" Value="WIKIMAPIA_REL"/>
+					<Name Number="1" Value="WIKIMAPIA_REL"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>11</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>100000</ShowScale>
+				<Point X="55.84448244" Y="37.81196422"/>
+			</Layer>
+		</Topic>
+		<Topic Name="ESRI" Link="Wmslist\ESRI.bmp">
+			<Layer Name="Спутник" UnicId="ESRI">
+				<ConnectedSting>
+					<URL><![CDATA[http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/]]></URL>
+					<ID Number="1" Value="ESRI"/>
+					<Name Number="1" Value="ESRI"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>8</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>40000000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Рельеф" UnicId="World_Shaded_Relief ">
+				<ConnectedSting>
+					<URL><![CDATA[http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/]]></URL>
+					<ID Number="1" Value="World_Shaded_Relief"/>
+					<Name Number="1" Value="World_Shaded_Relief"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>8</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>40000000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+		</Topic>
+		<Topic Name="Navitel" Link="Wmslist\Navitel.bmp">
+			<Layer Name="Карта" UnicId="Navitel">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.navitel.su/2.0/navitms.fcgi?t=]]></URL>
+					<ID Number="1" Value="Navitel"/>
+					<Name Number="1" Value="Navitel"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>15</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+			<Layer Name="Пробки" UnicId="NavitelTraff ">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.navitel.su/2.0/navitms.fcgi?j=]]></URL>
+					<ID Number="1" Value="NavitelTraff"/>
+					<Name Number="1" Value="NavitelTraff"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>15</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+		</Topic>
+		<Topic Name="Mail" Link="Wmslist\Mail.bmp">
+			<Layer Name="Карта" UnicId="MailMap">
+				<ConnectedSting>
+					<URL><![CDATA[http://t0.maps.mail.ru/tiles/scheme/]]></URL>
+					<ID Number="1" Value="MailMap"/>
+					<Name Number="1" Value="MailMap"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>16</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+			<Layer Name="Пробки" UnicId="MailTraff">
+				<ConnectedSting>
+					<URL><![CDATA[http://jn0maps.mail.ru/tiles/newjams/]]></URL>
+					<ID Number="1" Value="MailTraff"/>
+					<Name Number="1" Value="MailTraff"/>
+					<Matrix Name="EPSG:3395"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>16</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+			<Layer Name="Спутник" UnicId="MailSat">
+				<ConnectedSting>
+					<URL><![CDATA[http://t0.maps.mail.ru/TileSender.aspx?ModeKey=tiles&t=Images]]></URL>
+					<ID Number="1" Value="MailSat"/>
+					<Name Number="1" Value="MailSat"/>
+					<Matrix Name="EPSG:3395"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>17</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+		</Topic>
+		<Topic Name="ZULU" Link="Wmslist\ZULU.bmp">
+			<Layer Name="Мир" UnicId="google_test">
+				<ConnectedSting>
+					<URL><![CDATA[http://zs.zulugis.ru:6473/ws]]></URL>
+					<ID Number="1" Value="google_test:google_test"/>
+					<Name Number="1" Value="google_test"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>80000000</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Санкт-Петербург" UnicId="spb:piter">
+				<ConnectedSting>
+					<URL><![CDATA[http://zs.zulugis.ru:6473/ws]]></URL>
+					<ID Number="1" Value="spb:piter"/>
+					<Name Number="1" Value="Piter"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>2000000</ShowScale>
+				<Point X="59.8" Y="31"/>
+			</Layer>
+			<Layer Name="Рига" UnicId="riga:riga">
+				<ConnectedSting>
+					<URL><![CDATA[http://zs.zulugis.ru:6473/ws]]></URL>
+					<ID Number="1" Value="riga:riga"/>
+					<Name Number="1" Value="riga"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>25000</ShowScale>
+				<Point X="56.9" Y="24.21"/>
+			</Layer>
+		</Topic>
+		<Topic Name="GeoHub" Link="Wmslist\GeoHub.bmp">
+			<Layer Name="Спутник" UnicId="GeoHubSat">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.geohub.net/wms-c/1.0.0/sat/]]></URL>
+					<ID Number="1" Value="GeoHubSat"/>
+					<Name Number="1" Value="GeoHubSat"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>9</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+			<Layer Name="Карта-схема" UnicId="GeoHubMapSc">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.geohub.net/wms-c/1.0.0/yandex/]]></URL>
+					<ID Number="1" Value="GeoHubMapSc"/>
+					<Name Number="1" Value="GeoHubMapSc"/>
+					<Matrix Name="EPSG:3395"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>9</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+			<Layer Name="Рельеф" UnicId="GeoHubRel">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.geohub.net/wms-c/1.0.0/srtm/]]></URL>
+					<ID Number="1" Value="GeoHubRel"/>
+					<Name Number="1" Value="GeoHubRel"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>9</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+			<Layer Name="Схема" UnicId="GeoHubSch">
+				<ConnectedSting>
+					<URL><![CDATA[http://maps.geohub.net/wms-c/1.0.0/geobase_full/]]></URL>
+					<ID Number="1" Value="GeoHubRel"/>
+					<Name Number="1" Value="GeoHubRel"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>9</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+			</Layer>
+		</Topic>
+		<Topic Name="Nokia" Link="Wmslist\Nokia.bmp">
+			<Layer Name="Спутник Navteq" UnicId="NokiaNavSat">
+				<ConnectedSting>
+					<URL><![CDATA[http://stg.lbsp.navteq.com/satellite/6.0/images/?token=LBSP_DEV_ALL&profile=Recency&quadkey=]]></URL>
+					<ID Number="1" Value="NokiaNavSat"/>
+					<Name Number="1" Value="NokiaNavSat"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>18</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>4540359</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Спутник" UnicId="NokiaSat">
+				<ConnectedSting>
+					<URL><![CDATA[http://1.maptile.lbs.ovi.com/maptiler/v2/maptile/newest/satellite.day/]]></URL>
+					<ID Number="1" Value="NokiaSat"/>
+					<Name Number="1" Value="NokiaSat"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>19</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>4540359</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Карта" UnicId="NokiaMap">
+				<ConnectedSting>
+					<URL><![CDATA[http://1.maptile.lbs.ovi.com/maptiler/v2/maptile/newest/normal.day/]]></URL>
+					<ID Number="1" Value="NokiaMap"/>
+					<Name Number="1" Value="NokiaMap"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>19</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>4540359</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Ландшафт" UnicId="NokiaLand">
+				<ConnectedSting>
+					<URL><![CDATA[http://1.maptile.lbs.ovi.com/maptiler/v2/maptile/newest/terrain.day/]]></URL>
+					<ID Number="1" Value="NokiaLand"/>
+					<Name Number="1" Value="NokiaLand"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>19</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>4540359</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+			<Layer Name="Гибрид" UnicId="NokiaHyb">
+				<ConnectedSting>
+					<URL><![CDATA[http://1.maptile.lbs.ovi.com/maptiler/v2/maptile/newest/hybrid.day/]]></URL>
+					<ID Number="1" Value="NokiaHyb"/>
+					<Name Number="1" Value="NokiaHyb"/>
+					<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+				</ConnectedSting>
+				<PortalStadndart>UTMS</PortalStadndart>
+				<Alghoritm>19</Alghoritm>
+				<Transparent>0xffffffff</Transparent>
+				<ShowScale>4540359</ShowScale>
+				<Point X="55.94448244" Y="38.21196422"/>
+			</Layer>
+		</Topic>
+		<Topic Name="Карты" Link="Wmslist\Maps.bmp">
+			<Topic Name="ProtectedPlanet" Link="Wmslist\ProtectedPlanet.bmp">
+				<Layer Name="Карта" UnicId="ProtectedPlanet">
+					<ConnectedSting>
+						<URL><![CDATA[http://184.73.201.235/blue/]]></URL>
+						<ID Number="1" Value="ProtectedPlanet"/>
+						<Name Number="1" Value="ProtectedPlanet"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>6</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+				</Layer>
+			</Topic>
+			<Topic Name="MAPSFORFREE" Link="Wmslist\MAPSFORFREE.bmp">
+				<Layer Name="Рельеф(отображение до 1 : 600 000)" UnicId="MAPSFORFREE">
+					<ConnectedSting>
+						<URL><![CDATA[http://www.maps-for-free.com/layer/relief/]]></URL>
+						<ID Number="1" Value="MAPSFORFREE"/>
+						<Name Number="1" Value="MAPSFORFREE"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>12</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+					<MaxZoom>10</MaxZoom>
+				</Layer>
+			</Topic>
+			<Topic Name="NASA" Link="Wmslist\NASA.bmp">
+				<Layer Name="База данных дистанционного мониторинга возгораний" UnicId="fires24">
+					<ConnectedSting>
+						<URL><![CDATA[http://184.73.201.235/blue/]]></URL>
+						<ID Number="1" Value="fires24"/>
+						<Name Number="1" Value="Fires - Past 24 hours"/>
+						<Projection CRS="EPSG:4326"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>80000000</ShowScale>
+					<Point X="55.94448244" Y="38.21196422"/>
+				</Layer>
+				<Layer Name="Среднегодовые температуры" UnicId="TempYear">
+					<ConnectedSting>
+						<URL><![CDATA[http://gis.ncdc.noaa.gov/arcgis/services/cdo/isdsummaries/MapServer/WMSServer?SLD=http://gis.ncdc.noaa.gov/sld/isdsummaries/temp_yr5.xml&STYLES=Style1]]></URL>
+						<ID Number="1" Value="0"/>
+						<Name Number="1" Value="Hourly Global Summaries"/>
+						<Projection CRS="EPSG:4326"/>
+					</ConnectedSting>
+					<PortalStadndart>WMS</PortalStadndart>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>80000000</ShowScale>
+					<Point X="55.94448244" Y="38.21196422"/>
+				</Layer>
+			</Topic>
+			<Topic Name="Marshruti.ru" Link="Wmslist\Marshruti.bmp">
+				<Layer Name="Интерактивная топокарта - Маршруты.ру" UnicId="Marshruti">
+					<ConnectedSting>
+						<URL><![CDATA[http://maps.marshruty.ru/ml.ashx?al=1]]></URL>
+						<ID Number="1" Value="Marshruti"/>
+						<Name Number="1" Value="Marshruti"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>0</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+					<ShowScale>4540359</ShowScale>
+					<Point X="55.94448244" Y="38.21196422"/>
+				</Layer>
+			</Topic>
+			<Topic Name="GenShtab" Link="Wmslist\GenShtab.bmp">
+				<Layer Name="Карта 10km" UnicId="GenShtab10km">
+					<ConnectedSting>
+						<URL><![CDATA[http://188.95.188.28/cgi-bin/webfile_mgr.cgi?cmd=cgi_download&path=/mnt/HD/HD_a2/pub/genshtab10km/z]]></URL>
+						<ID Number="1" Value="GenShtab10km"/>
+						<Name Number="1" Value="GenShtab10km"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>21</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+				</Layer>
+				<Layer Name="Карта 5km" UnicId="GenShtab5km">
+					<ConnectedSting>
+						<URL><![CDATA[http://188.95.188.28/cgi-bin/webfile_mgr.cgi?cmd=cgi_download&path=/mnt/HD/HD_a2/pub/genshtab5km/z]]></URL>
+						<ID Number="1" Value="GenShtab5km"/>
+						<Name Number="1" Value="GenShtab5km"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>21</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+				</Layer>
+				<Layer Name="Карта 2km" UnicId="GenShtab2km">
+					<ConnectedSting>
+						<URL><![CDATA[http://188.95.188.28/cgi-bin/webfile_mgr.cgi?cmd=cgi_download&path=/mnt/HD/HD_a2/pub/genshtab2km/z]]></URL>
+						<ID Number="1" Value="GenShtab2km"/>
+						<Name Number="1" Value="GenShtab2km"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>21</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+				</Layer>
+				<Layer Name="Карта 1km" UnicId="GenShtab1km">
+					<ConnectedSting>
+						<URL><![CDATA[http://188.95.188.28/cgi-bin/webfile_mgr.cgi?cmd=cgi_download&path=/mnt/HD/HD_a2/pub/genshtab1km/z]]></URL>
+						<ID Number="1" Value="GenShtab1km"/>
+						<Name Number="1" Value="GenShtab1km"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>21</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+				</Layer>
+				<Layer Name="Карта 500m" UnicId="GenShtab500m">
+					<ConnectedSting>
+						<URL><![CDATA[http://188.95.188.28/cgi-bin/webfile_mgr.cgi?cmd=cgi_download&path=/mnt/HD/HD_a2/pub/genshtab500m/z]]></URL>
+						<ID Number="1" Value="GenShtab500m"/>
+						<Name Number="1" Value="GenShtab500m"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>21</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+				</Layer>
+				<Layer Name="Карта 250m" UnicId="GenShtab250m">
+					<ConnectedSting>
+						<URL><![CDATA[http://188.95.188.28/cgi-bin/webfile_mgr.cgi?cmd=cgi_download&path=/mnt/HD/HD_a2/pub/genshtab250m/z]]></URL>
+						<ID Number="1" Value="GenShtab250m"/>
+						<Name Number="1" Value="GenShtab250m"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>21</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+				</Layer>
+			</Topic>
+		</Topic>
+		<Topic Name="Спутниковые снимки" Link="Wmslist\Sattelite.bmp">
+			<Topic Name="OSM" Link="Wmslist\OSM.bmp">
+				<Layer Name="Спутник" UnicId="OSM">
+					<ConnectedSting>
+						<URL><![CDATA[http://tile.osmosnimki.ru/basesat/]]></URL>
+						<ID Number="1" Value="OSM"/>
+						<Name Number="1" Value="OSM"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>9</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+				</Layer>
+			</Topic>
+			<Topic Name="Роскосмос" Link="Wmslist\Роскосмос.bmp">
+				<Layer Name="Спутник LandSat" UnicId="RosLandSat">
+					<ConnectedSting>
+						<URL><![CDATA[http://www.gptl.ru/coverages/images_landsat/]]></URL>
+						<ID Number="1" Value="RosLandSat"/>
+						<Name Number="1" Value="RosLandSat"/>
+						<Matrix Name="urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible"/>
+					</ConnectedSting>
+					<PortalStadndart>UTMS</PortalStadndart>
+					<Alghoritm>20</Alghoritm>
+					<Transparent>0xffffffff</Transparent>
+				</Layer>
+			</Topic>
+		</Topic>
+		<Topic Name="Атлас земель сельхозназначения" Link="Wmslist\АЗСХН.bmp">
+			<Layer Name="Земли сельскохозяйственного назначения прошедшие обследования 2009 г." UnicId="Atlas_Zemli_sx_A1">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/Atlas_Zemli_sx/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;layers=show%3A1%2C2%2C3%2C4%2C5&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="Atlas_Zemli_sx_A1"/>
+					<Name Number="1" Value="Земли сельскохозяйственного назначения прошедшие обследования 2009 г."/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Земли сельскохозяйственного назначения прошедшие обследования 2010 г." UnicId="Atlas_Zemli_sx_A2">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/Atlas_Zemli_sx/MapServer/export?dpi=96&amp;transparent=true&amp;layers=show%3A2&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="Atlas_Zemli_sx_A2"/>
+					<Name Number="1" Value="Земли сельскохозяйственного назначения прошедшие обследования 2010 г."/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Земли сельскохозяйственного назначения прошедшие обследования 2011 г." UnicId="Atlas_Zemli_sx_A3">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/Atlas_Zemli_sx/MapServer/export?dpi=96&amp;transparent=true&amp;layers=show%3A3&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="Atlas_Zemli_sx_A3"/>
+					<Name Number="1" Value="Земли сельскохозяйственного назначения прошедшие обследования 2011 г."/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Земли сельскохозяйственного назначения прошедшие обследования 2012 г." UnicId="Atlas_Zemli_sx_A4">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/Atlas_Zemli_sx/MapServer/export?dpi=96&amp;transparent=true&amp;layers=show%3A4&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="Atlas_Zemli_sx_A4"/>
+					<Name Number="1" Value="Земли сельскохозяйственного назначения прошедшие обследования 2012 г."/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Земли сельскохозяйственного назначения прошедшие обследования 2013 г." UnicId="Atlas_Zemli_sx_A5">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/Atlas_Zemli_sx/MapServer/export?dpi=96&amp;transparent=true&amp;layers=show%3A5&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="Atlas_Zemli_sx_A5"/>
+					<Name Number="1" Value="Земли сельскохозяйственного назначения прошедшие обследования 2013 г."/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Сельскохозяйственные культуры" UnicId="MOP2_Cultures">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/MOP2_Cultures/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="MOP2_Cultures"/>
+					<Name Number="1" Value="Сельскохозяйственные культуры"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Виды угодий" UnicId="MOP2_Vidy_ugodiy">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/MOP2_Vidy_ugodiy/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="MOP2_Vidy_ugodiy"/>
+					<Name Number="1" Value="Виды угодий"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Плодородие почв" UnicId="MOP2_Plodorodie">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/MOP2_Plodorodie/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="MOP2_Plodorodie"/>
+					<Name Number="1" Value="Виды угодий"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1000000</ShowScale>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Мелиорированные земли" UnicId="MOP2_Meliorate">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/MOP2_Meliorate/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="MOP2_Meliorate"/>
+					<Name Number="1" Value="Мелиорированные земли"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Деградированные сельхозугодия" UnicId="MOP2_Plodorodie">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/MOP2_Plodorodie/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="MOP2_Plodorodie"/>
+					<Name Number="1" Value="Деградированные сельхозугодия"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Состояние неиспользуемых земель" UnicId="MOP2_Unused">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/MOP2_Unused/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="MOP2_Unused"/>
+					<Name Number="1" Value="Состояние неиспользуемых земель"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Распределение земель пашни по обменному калию" UnicId="agrohim_all_A1">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/agrohim_all/MapServer/export?dpi=96&amp;transparent=true&amp;layers=show%3A1&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="agrohim_all_A1"/>
+					<Name Number="1" Value="Распределение земель пашни по обменному калию"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>8</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Распределение земель пашни по подвижному фосфору" UnicId="agrohim_all_A2">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/agrohim_all/MapServer/export?dpi=96&amp;transparent=true&amp;layers=show%3A2&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="agrohim_all_A2"/>
+					<Name Number="1" Value="Распределение земель пашни по подвижному фосфору"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>8</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Распределение земель пашни по органическому веществу" UnicId="agrohim_all_A3">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/agrohim_all/MapServer/export?dpi=96&amp;transparent=true&amp;layers=show%3A3&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="agrohim_all_A3"/>
+					<Name Number="1" Value="Распределение земель пашни по органическому веществу"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>8</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Распределение земель пашни по кислотности (pH, KCL-вытяжка)" UnicId="agrohim_all_A4">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/agrohim_all/MapServer/export?dpi=96&amp;transparent=true&amp;layers=show%3A4&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="agrohim_all_A4"/>
+					<Name Number="1" Value="Распределение земель пашни по кислотности (pH, KCL-вытяжка)"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>8</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Распределение земель пашни по кислотности (pH-водная вытяжка)" UnicId="agrohim_all_A5">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/agrohim_all/MapServer/export?dpi=96&amp;transparent=true&amp;layers=show%3A5&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="agrohim_all_A5"/>
+					<Name Number="1" Value="Распределение земель пашни по кислотности (pH-водная вытяжка)"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>8</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Земли сельскохозяйственного назначения не прошедшие обследования" UnicId="Atlas_Zemli_sx_A6">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/Atlas_Zemli_sx/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;layers=show%3A6&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="Atlas_Zemli_sx_A6"/>
+					<Name Number="1" Value="Земли сельскохозяйственного назначения не прошедшие обследования"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Зональная статистика" UnicId="Atlas_SDMZ">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/Atlas_SDMZ/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image
+
+</URL>
+					<ID Number="1" Value="Atlas_SDMZ"/>
+					<Name Number="1" Value="Зональная статистика"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1000000</ShowScale>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+			<Layer Name="Почвенные карты  М:10000-25000" UnicId="Soils">
+				<ConnectedSting>
+					<URL>http://atlas.mcx.ru:6080/arcgis/rest/services/Atlas/Soils/MapServer/export?dpi=96&amp;transparent=true&amp;format=png32&amp;bboxSR=102100&amp;imageSR=102100&amp;f=image</URL>
+					<ID Number="1" Value="Soils"/>
+					<Name Number="1" Value="Почвенные карты  М:10000-25000"/>
+					<Projection CRS="EPSG:3857"/>
+				</ConnectedSting>
+				<PortalStadndart>WMS</PortalStadndart>
+				<SubType>NOCAP</SubType>
+				<Transparent>0xffffffff</Transparent>
+				<Alghoritm>28</Alghoritm>
+				<ShowScale>1091957</ShowScale>
+				<MinZoom>7</MinZoom>
+				<MaxZoom>13</MaxZoom>
+				<Point X="50.68784883" Y="35.73074514"/>
+			</Layer>
+		</Topic>
+	</Portal>
+</Geoportal>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.468,=C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\GisTool11\MAPPACK.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.426,=C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\GisTool11\gisacces.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.570,=C:\programming\test\NMEA_PARSER\nmea_parser.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.575,=C:\programming\test\NMEA_PARSER\nmea_parser.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.211,C:\programming\test\Unit1.h=C:\Users\serg\Documents\RAD Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.129,=C:\Users\serg\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.211,C:\programming\test\Unit1.cpp=C:\Users\serg\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.849,=C:\programming\test\Ports\UPort.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.074,C:\programming\test\Project1.cbproj=C:\Users\serg\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.211,C:\programming\test\Unit1.dfm=C:\Users\serg\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.702,=C:\programming\test\Ports\UPort.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.934,C:\programming\XE2_project\Navigator\navigator.cbproj=C:\programming\XE2_project\Navigator\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
